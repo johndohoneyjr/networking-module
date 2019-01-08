@@ -20,6 +20,5 @@ output "security_group" {
 }
 
 output "foo" {
-  sensitive = true
   value     = "bar"
 }

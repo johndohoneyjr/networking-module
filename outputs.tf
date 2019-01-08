@@ -18,7 +18,3 @@ output "security_group" {
   sensitive = true
   value = "${aws_security_group.tf_public_sg.id}"
 }
-
-output "foo" {
-  value     = "bar"
-}

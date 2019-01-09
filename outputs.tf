@@ -15,6 +15,10 @@ output "subnet_ips" {
 // testing
 //
 output "securitygroup" {
-  sensitive = true
   value = "${aws_security_group.tf_public_sg.id}"
+}
+
+output "foo" {
+  sensitive = true
+  value = "bar"
 }

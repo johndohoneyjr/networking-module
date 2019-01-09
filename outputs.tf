@@ -22,3 +22,8 @@ output "foo" {
   sensitive = true
   value = "bar"
 }
+
+output "foo2" {
+  sensitive = true
+  value = "bar2"
+}

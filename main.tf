@@ -15,7 +15,7 @@ resource "aws_vpc" "tf_vpc" {
   enable_dns_support   = true
 
   tags {
-    Name = "${var.project_name}"
+    Name = "${terraform.workspace}-${var.project_name}"
   }
 }
 

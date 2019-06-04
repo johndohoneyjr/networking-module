@@ -11,13 +11,6 @@ terraform {
   }
 }
 
-#terraform {
-#  backend "atlas" {
-#    name    = "johndohoneyjr/networking-partition"
-#    address = "https://app.terraform.io"
-#  }
-#}
-
 data "aws_availability_zones" "available" {}
 
 resource "aws_vpc" "tf_vpc" {

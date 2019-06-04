@@ -1,11 +1,22 @@
 ## -- Networking/main.tf
 
 terraform {
-  backend "atlas" {
-    name    = "johndohoneyjr/networking-partition"
-    address = "https://app.terraform.io"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "johndohoneyjr"
+
+    workspaces {
+      name = "networking-partition"
+    }
   }
 }
+
+#terraform {
+#  backend "atlas" {
+#    name    = "johndohoneyjr/networking-partition"
+#    address = "https://app.terraform.io"
+#  }
+#}
 
 data "aws_availability_zones" "available" {}
 
